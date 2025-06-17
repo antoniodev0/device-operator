@@ -1,0 +1,8 @@
+# test-request.yaml
+apiVersion: devices.example.com/v1alpha1
+kind: DeviceRegistration
+metadata:
+  name: test-device-01
+  namespace: device-operator-system
+spec:
+  publicKey: "ssh-rsa AAAA..." # Una chiave pubblica fittizia

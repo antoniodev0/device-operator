@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: device-gateway
+  namespace: device-operator-system
+  labels:
+    app: device-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: device-gateway
+  template:
+    metadata:
+      labels:
+        app: device-gateway
+    spec:
+      serviceAccountName: device-gateway-sa
+      containers:
+      - name: gateway
+        image: antonio/device-gateway:v0.1 # <-- Assicurati che il nome dell'immagine sia corretto
+        ports:
+        - containerPort: 8080
+        env:
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace

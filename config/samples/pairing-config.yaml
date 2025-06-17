@@ -1,0 +1,11 @@
+# config/samples/pairing-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  # Il nome del ConfigMap deve essere fisso e conosciuto dall'operatore
+  name: device-pairing-config
+  # Installalo nello stesso namespace dell'operatore
+  namespace: device-operator-system
+data:
+  # L'amministratore cambia questo valore in "true" per permettere nuove registrazioni.
+  enabled: "true"
