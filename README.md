@@ -207,5 +207,5 @@ kubectl delete deviceregistration <nome-della-risorsa> -n device-operator-system
 Risultato atteso: deviceregistration.devices.example.com "<nome-della-risorsa>" deleted
 
 ## Immagini del test
-./images/image1.png
+![Device Enrollment Workflow](./images/image1.png)
 ./images/image2.png
