@@ -204,8 +204,8 @@ Seccusseivamente:
 # Sostituisci <nome-della-risorsa> con il nome del dispositivo da rimuovere
 kubectl delete deviceregistration <nome-della-risorsa> -n device-operator-system
 ```
-Risultato atteso: deviceregistration.devices.example.com "<nome-della-risorsa>" deleted
+Risultato atteso: deviceregistration.devices.example.com "nome-della-risorsa" deleted
 
 ## Immagini del test
 ![Device Enrollment Workflow](./images/image1.png)
-./images/image2.png
+![Device Enrollment Workflow](./images/image2.png)
