@@ -205,3 +205,7 @@ Seccusseivamente:
 kubectl delete deviceregistration <nome-della-risorsa> -n device-operator-system
 ```
 Risultato atteso: deviceregistration.devices.example.com "<nome-della-risorsa>" deleted
+
+## Immagini del test
+./images/image1
+./images/image2
