@@ -209,3 +209,9 @@ Risultato atteso: deviceregistration.devices.example.com "nome-della-risorsa" de
 ## Immagini del test
 ![Device Enrollment Workflow](./images/image1.png)
 ![Device Enrollment Workflow](./images/image2.png)
+
+## Eseguire il Client di Test (Simulatore MCU)
+
+Per completare il ciclo e simulare un dispositivo reale che si registra, è stato creato un client di test in **Rust**. Questo script si comporterà come un'Unità a Microcontrollore (MCU) che avvia il processo di enrollment.
+
+Per runnare l'MCU basta entrare all'interno della cartella "mcu_client" e lanciare da terminale "cargo run". Da lì partirà la generazione delle chiavi e l'enrollment.
