@@ -75,15 +75,15 @@ Ogni componente (Operator e Gateway) viene pacchettizzato in un'immagine Docker.
 
 ```sh
 # 1. Costruisci l'immagine dell'Operator (usa un tag di versione, es. v1.0)
-make docker-build IMG=antonio/device-operator:v1.0
+make docker-build IMG=antonio/device-operator:v0.1
 
 # 2. Costruisci l'immagine del Gateway
-docker build -t antonio/device-gateway:v1.0 -f gateway/Dockerfile .
+docker build -t antonio/device-gateway:v0.1 -f gateway/Dockerfile .
 
 # 3. Importa entrambe le immagini nel registro interno del cluster k3d
 #    Questo passaggio è necessario affinché Kubernetes possa trovarle.
-k3d image import antonio/device-operator:v1.0 -c dev
-k3d image import antonio/device-gateway:v1.0 -c dev
+k3d image import antonio/device-operator:v0.1 -c dev
+k3d image import antonio/device-gateway:v0.1 -c dev
 ```
 
 ### 4. Deploya l'Operator e il Gateway
@@ -93,7 +93,7 @@ Con le immagini pronte, possiamo distribuire le applicazioni nel cluster.
 ```sh
 # 1. Deploya l'Operator
 #    Questo comando installa la CRD, i ruoli RBAC e il Deployment dell'Operator.
-make deploy IMG=antonio/device-operator:v1.0
+make deploy IMG=antonio/device-operator:v0.1
 
 # 2. Deploya il Gateway
 #    Questo comando installa il ServiceAccount, i ruoli e il Deployment del Gateway.

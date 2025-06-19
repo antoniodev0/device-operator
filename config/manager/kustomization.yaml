@@ -5,4 +5,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: antonio/device-operator
-  newTag: v0.3
+  newTag: v0.1
